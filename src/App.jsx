@@ -1,0 +1,18 @@
+import { useState } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Summary from "./Pages/Summary";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<Summary />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
